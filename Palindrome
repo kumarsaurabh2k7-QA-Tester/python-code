@@ -1,0 +1,28 @@
+# Check if a string or number is a palindrome.
+# Get input from user
+
+data = input("Enter a number or string: ")
+
+def is_palindrome(string):
+    string = str(string)
+    new_string = "".join(char.lower() for char in string if char.isalpha())
+    return new_string == new_string[::-1]
+
+# check user input is string or number
+if data.isdigit():
+    print(f"{data} is a number.")
+else:
+    print(f"{data} is a string.")
+
+# call function
+if is_palindrome(data):
+    print(f"{data} is a palindrome")
+else:
+    print(f"{data} is not a palindrome")
+
+
+
+
+
+
+
